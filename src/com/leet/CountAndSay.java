@@ -10,25 +10,27 @@ public class CountAndSay {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<Pair> list = strToCount("sdzdffggfggfghghj3");
+		countAndSay(5);
 	}
 	
-	public static void countAndSay(int n) {
+	public static String countAndSay(int n) {
         if(n <= 0)
-        	return;
+        	return (String) null;
         
-        String pre;
+        	
         String current = "1";
+        
+        if(n == 1)
+        	return current;
+        
         List<Pair> list;
-        for(int i = 1; i <= n; i++){
-        	pre = current;
-        	list = 
-        	
-        	
-        	System.out.print(current + ", ");
+        for(int i = 2; i <= n; i++){
+        	list = strToCount(current);
+        	current = countToStr(list);
+        	//System.out.print(current + ", ");
         }
         
-        
+        return current;
     }
 	
 	public static List<Pair> strToCount(String str){
@@ -60,9 +62,8 @@ public class CountAndSay {
 		
 		StringBuilder sb = new StringBuilder();
 		for(Pair p : list){
-			for(int i = p.value; i > 0; i--){
-				sb.append(p.key);
-			}
+			sb.append(p.value);
+			sb.append(p.key);
 		}
 		
 		return sb.toString();
