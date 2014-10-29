@@ -1,6 +1,5 @@
 package com.leet;
 
-import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class ReversePolish {
