@@ -1,0 +1,83 @@
+1.	Java has no multi-inheritance, use interface to solve this issue. 
+2.	Two ordered arrays, find the kth-large number. 
+3.	BFS 
+4.	DFS 
+5.	One linkedlist, every node contains a char, delete all node with a, e, i, o, u 
+6.	Least common ancestor 
+7.	“world hello” -> “hello world”, left and right has spaces [done - ReverseWordsInString.java] 
+8.	Array rotation 
+9.	find the longest palindrome 
+10.	Given a sentence, capitalize the first letter of each word in the sentence 
+11.	BTree, implement a method to calculate the sum of all nodes of a given path 
+12.	Given a large file of numbers or a continous stream of numbers, find the kth largest number 
+13.	Why Java not support Multi-inheritance 
+14.	How Java interface fix the disadvantage of Multi-inheritance 
+15.	What method does Object class have? 
+16.	Mirror Binary tree 
+17.	Coupon, location, couponstore (Design Pattern Factory) 
+
+要求实现找coupon的功能。有三个class：coupon，location， couponstore。 找 coupon的标准是location。如果location没有coupon，在他的parentlocation找。 
+class Loca { 
+	int locaId; 
+	int parentLocaId; // -1 if no parent, location is hierarchy 
+	static Loca findLocation(int locationId) {...}
+} 
+class Store { 
+	private List couponList; 
+	Coupon findBestCoupon(int locationId) { 
+	要实现这个 
+} 
+18.	Hash Tables/Trees 
+19.	Given four coins that could have any value (i.e. $.17, $.07, $.05, $.01), come up with an algorithm that figures out the fewest number of coins to get that value. 
+20.	Given a flat text file that contains a range of IP addresses that map to a location (e.g. 192.168.0.0-192.168.0.255 = Boston, MA), come up with an algorithm that will find a city for a specific ip address if a mapping exists. 
+21.	What is the difference between array and linked list? 
+22.	What if you had the worst hash-function ever - what is the complexity of lookup? 
+23.	How many dates in the 1900's in the form mm/DD/yy are palindromes? 
+24.	Write a function to reverse a string in the most memory efficent way? (you can code in any language you like) 
+25.	What happens if you can an odd length string 
+26.	What is immutable and mutable strings in Python 
+27.	Travel alerts are displayed on the TripAdvisor website for a given region (e.g. Japan could show that there is earth quake etc.). Implement the findBestTravelAlert method (interview pasted some template code in the online whiteboard). 
+-	What is the complexity of the code you have written 
+-	How can you optimize? how can you optimize it even further. 
+28.	How would you implement an LRU Cache (LRU - Least Recently Used). What would your data structure look like. [done - LRUCache.java] 
+29.	Implement a LinkedList in your language of choice. 
+30.	I was given the requirements for a "source code management" system.I was asked to detail the kinds of objects to build and what the database table would look like. 
+31.	Given a destination page and a page with all the links embedded in it, write a function that determines if the destination is "reachable". You must protect against cyclical / infinite recursion. 
+32.	difference between equals operator and equality method 
+33.	Given a binary tree with integer values in each field, sum the entire tree. 
+34.	Tree traversal. 
+35.	You have a fixed list of words, construct a data structure to achieve efficient (O(1) time complexity) prefix lookup. Write code to implement the lookup.You have a fixed list of words, construct a data structure to achieve efficient (O(1) time complexity) prefix lookup. Write code to implement the lookup. 
+36.	For example, the result of looking up "app" is {apple, applications, ...} 
+37.	You have one billion numbers, implement getRandom() which returns a random number from them. 
+Constaints: 
+-	No duplicate returning value. 
+-	getRandom() will at most be invoked 100 million times. 
+-	Then optimize for space. 
+38.	Write a routine to print the numbers 1 to 100 and back to 1 again without using any loops. 
+39.	coding up a binary search tree and implementing an insert() and findSumAtLevel(int n) routine. 
+40.	Given a tree of world regions, locations, and specific destinations and attractions, find the most efficient ways to determine the common parent of two arbitrary nodes in terms of space and time. 
+41.	Write a web crawler to count number of pages in a website 
+42.	count the number of duplicates in a binary tree in O(n) time O(1) space. 
+43.	Find the next larger node of a node in a binary search tree 
+44.	Given two stacks, how can you implement a queue? What are the costs of push and pop operations? 
+45.	How would you implement a bit vector data structure? Optimizing for memory? 
+46.	How would you implement a Binary Search Tree? 
+47.	What are the properties of a good hash? 
+48.	Given two strings; boston and obtons how can you determine that they, and any other set of strings, are anagrams of each other. Try and make it as efficient as possible 
+49.	Other than an array, what data structure has O(1) insertion and O(1) search? 
+50.	How can you tell efficiently how many consecutive zero's are in a number without looping through its digits? 
+51.	Implement StringBuilder in Java. 
+52.	The most difficult question was when the interviewer asked that "if we sum up the elements in the nodes by first visiting the left subtree, then the middle, and then the right... what kind of traversal is this?" 
+53.	Check if one binary tree is the subtree of another 
+54.	He gave me a set of nodes and asked me to search for a given node. Note: Consider the nodes are in a Binary tree. 
+55.	how to get the middle index in an arraylist 
+56.	Given a dictionary of words and a 4x4 boggle board, see which dictionary words you can make. 
+57.	Given a binary search tree, set up a variable in each node that points to its right neighbor. 
+58.	The first interviewer described to me a system that he called h-score. h-score is a score that publishers get if articles that they publish get citations in other articles. A publisher gets h-score of x if they wrote at least x articles that got x citations each. Given an array with the number of citations per article, write a function to calculate the h-score for the publisher. 
+59.	Finding the depth of any arbitrary node in a binary tree 
+60.	2 sum [done - TwoSum.java]
+61.	find if two linked lists join each others or not and if yes where is the intersection point. 
+62.	What's the difference for and foreach.?He expect me to say: if I use LinkedList a, use `for` and `a.get(index)` would take O(n^2) time complexity 
+63.	Write a function that raises a number to an exponent in C or Java 
+64.	Check if a tree is symmetric. 
+65.	If you can do unlimited pre-processing, how would you find the lowest common ancestor of any two nodes in a tree, in O(1) time? 

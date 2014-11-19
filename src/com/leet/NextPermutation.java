@@ -9,7 +9,7 @@ public class NextPermutation {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a = {};
+		int[] a = {1,2,4,3,5};
 		nextPermutation(a);
 	}
 	

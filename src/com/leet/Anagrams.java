@@ -7,14 +7,6 @@ import java.util.List;
 
 public class Anagrams {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public List<String> anagrams(String[] strs) {
         List<String> result = new ArrayList<String>();
         
