@@ -73,4 +73,29 @@ public class MyBST {
 		}
 		return p;
 	}
+	
+	public void insert(int val){
+		TreeNode newNode = new TreeNode(val);
+		if(root == null){
+			root = newNode;
+			return;
+		}
+			
+		TreeNode cur = root;
+		TreeNode pre = null;
+		while(cur != null){
+			pre = cur;
+			if(val < cur.val)
+				cur = cur.left;
+			else
+				cur = cur.right;
+		}
+		
+		newNode.parent = pre;
+		if(val < pre.val)
+			pre.left = newNode;
+		else
+			pre.right = newNode;
+	}
+	
 }

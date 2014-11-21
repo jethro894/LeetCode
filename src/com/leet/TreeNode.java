@@ -5,7 +5,7 @@ public class TreeNode {
 	public TreeNode left;
 	public TreeNode right;
 	public TreeNode parent;
-	TreeNode(int x) { val = x; }
+	public TreeNode(int x) { val = x; }
 	TreeNode() {}
 	
 	public boolean isLeaf(){
