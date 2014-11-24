@@ -6,7 +6,7 @@ public class TreeNode {
 	public TreeNode right;
 	public TreeNode parent;
 	public TreeNode(int x) { val = x; }
-	TreeNode() {}
+	public TreeNode() {}
 	
 	public boolean isLeaf(){
 		if(this.left == null && this.right == null)
