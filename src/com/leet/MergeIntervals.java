@@ -13,7 +13,6 @@ public class MergeIntervals {
         	return list;
         
         Comparator<Interval> comp_itv = new Comparator<Interval>(){
-
 			@Override
 			public int compare(Interval arg0, Interval arg1) {
 				// TODO Auto-generated method stub
