@@ -2,9 +2,6 @@ package com.leet;
 
 public class MedianOfTwoSortedArrays {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
