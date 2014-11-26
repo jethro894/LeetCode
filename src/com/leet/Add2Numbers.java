@@ -2,14 +2,6 @@ package com.leet;
 
 public class Add2Numbers {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 		if (l1 == null)
