@@ -1,5 +1,21 @@
 package com.leet.zill;
 
+/*
+ * Trinary Tree with node class and insert/delete methods
+ * 		insertion():
+ * 				-	insert a value into the tree
+ * 				-	if root is null, create the root
+ * 				-	using iteration to find the node to add
+ * 				-	it is guaranteed that only the highest (most upper) node with the same value, will have left and right children. 
+ * 						This has eliminated the difficult situation of deleting a mid child and merging its own left and right children with its ancestor's children
+ * 	
+ * 		deletion():
+ * 				-	delete a copy of the value in the tree, and reset the root if necessary
+ * 				-	if multiple copies of the value is found, the lowest leaf will be deleted.(it must be a leaf, according to the insertion() method)
+ * 				-	otherwise the deletion will be the same with methods in binary tree. Subtree transplanting is necessary when deleting a node with two children.
+ * 				-	i'm using resursion here because it is easier to implement
+ */
+
 public class TrinaryTree {
 	private TrinaryTreeNode root;
 	
@@ -60,11 +76,11 @@ public class TrinaryTree {
 		if(subroot == null)
 			return null;
 		
-		if(val < subroot.val){
+		if(val < subroot.val)
 			subroot.left = deletionHelper(val, subroot.left);
-		}else if(val > subroot.val){
+		else if(val > subroot.val)
 			subroot.right = deletionHelper(val, subroot.right);
-		}else if(val == subroot.val){
+		else{
 			if(subroot.mid != null)
 				subroot.mid = deletionHelper(val, subroot.mid);
 			else if(subroot.isLeaf())
@@ -82,7 +98,7 @@ public class TrinaryTree {
 		return subroot;
 	}
 	
-	public int findSuccessorVal(TrinaryTreeNode subroot){
+	private int findSuccessorVal(TrinaryTreeNode subroot){
 		if(subroot == null)
 			return Integer.MIN_VALUE;
 		TrinaryTreeNode cur = subroot;
@@ -92,6 +108,7 @@ public class TrinaryTree {
 		return cur.val;
 	}
 	
+	//Node definition class
 	class TrinaryTreeNode {
 		int val;
 		TrinaryTreeNode left, mid, right;
