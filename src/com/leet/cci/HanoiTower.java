@@ -1,5 +1,11 @@
 package com.leet.cci;
 
-public class HanoiTower {
+import java.io.File;
 
+import com.leet.supph.PlainTextInventoryFileParser;
+
+public class HanoiTower {
+	public void foo(){
+		PlainTextInventoryFileParser pp = new PlainTextInventoryFileParser(new File("sdfsdf"), "");
+	}
 }

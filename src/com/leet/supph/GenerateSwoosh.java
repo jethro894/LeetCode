@@ -12,11 +12,11 @@ import java.util.Set;
  * My basic idea is to zoom a sample logo to a new resolution
  * The sample logo I am using is the 16*8 logo from the problem set
  * for width <= 27, the simple nearest neighbor interpolation works well
- * for larger width, the resultant grid looks mosaic, and I have two choices:
+ * for larger width, the resultant grid looks mosaic. To obtain better result, I have two choices:
  * 		1. bilinear interpolation
  * 		2. image smoothing
  * 
- * I have tried bilinear interpolation, and the result is not very promising for binary images. It still looks mosaic.
+ * I have tried bilinear interpolation, and the result is not very promising for binary pixels. It still looks mosaic.
  * Finally I choose to smooth the image, this will result in higher time complexity. (still O(n^2) if we choose constant mask size)
  * But I have chosen scaling factor dependent mask size to obtain better result
  * This is because I assume that image processing will not have arbitraty large input 
