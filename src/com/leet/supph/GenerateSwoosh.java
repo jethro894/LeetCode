@@ -31,7 +31,7 @@ public class GenerateSwoosh {
 	
 	//main test function
 	public static void main(String[] args){
-		new GenerateSwoosh().drawSwoosh(26);
+		new GenerateSwoosh().drawSwoosh(90);
 	}
 	
 	//function required

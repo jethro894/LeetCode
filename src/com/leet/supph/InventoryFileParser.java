@@ -34,13 +34,27 @@ public abstract class InventoryFileParser {
 	}
 	
 	//if the column indexes of product ID and quantity are confirmed, feeding a tokinized line to this method will generate and save a formatted entry
-	protected void generateEntry(String[] line_tokens) throws Exception{
+	protected void generateEntry(List<String> line_tokens) throws Exception{
 		if(product_ID_col_index == -1 || quantity_col_index == -1 || supplier_ID == null)
 			return;
 		
-		InventoryEntry ie = new InventoryEntry(line_tokens[product_ID_col_index], 
+		//if the quantity column is not an integer, return
+		if(!isInteger(line_tokens.get(quantity_col_index)))
+			return;
+		
+		InventoryEntry ie = new InventoryEntry(line_tokens.get(product_ID_col_index), 
 				supplier_ID, 
-				Integer.parseInt(line_tokens[quantity_col_index]));
+				Integer.parseInt(line_tokens.get(quantity_col_index)));
 		entries.add(ie);
+	}
+	
+	private boolean isInteger(String input) {
+	    try {
+	        Integer.parseInt( input );
+	        return true;
+	    }
+	    catch( Exception e ) {
+	        return false;
+	    }
 	}
 }

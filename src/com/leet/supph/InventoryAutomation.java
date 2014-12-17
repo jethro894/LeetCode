@@ -74,6 +74,9 @@ public class InventoryAutomation {
 		String table_name = args.length > 1? args[1] : "SUPPLIER_PRODUCT";
 		for(InventoryFileParser ifp : container){
 			ifp.startParsing();
+			for(InventoryEntry ie : ifp.entries){
+				System.out.println(ie.supplier_id + ", " + ie.product_id + ", " + ie.quantity);
+			}
 			ifp.saveToDB(dm, table_name);
 		}
 		
