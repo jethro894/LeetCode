@@ -28,7 +28,7 @@ import java.util.List;
 public class InventoryAutomation {
 	
 	/*
-	 * main entrace, takes an argument to find the directory
+	 * main entrance, takes an argument to find the directory
 	 * otherwise use the default folder "data/" under the working directory
 	 */
 	public static void main(String[] args){
