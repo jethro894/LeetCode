@@ -22,6 +22,6 @@ public class SingleNumber {
 			else
 				record.remove(i);
 		}
-		return (int) record.keySet().toArray()[0];
+		return (Integer) record.keySet().toArray()[0];
     }
 }

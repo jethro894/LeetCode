@@ -13,8 +13,30 @@ public class RepeatedDNASequences {
 			System.out.println(s);
 	}
 	
+	public List<String> findRepeatedDnaSequencesLeet(String s) {
+        List<String> result = new ArrayList<String>();
+        Set<String> list = new HashSet<String>();
+        Set<String> counts = new HashSet<String>();
+        char[] array = s.toCharArray();
+        if(array.length >= 10){
+        	for(int i = 0; i <= array.length-10; i++){
+        		StringBuilder sb = new StringBuilder();
+        		for(int j = 0; j < 10; j++)
+        			sb.append(array[i+j]);
+        		String sub = sb.toString();
+        		if(counts.contains(sub)){
+        			list.add(sub);
+        		}else
+        			counts.add(sub);
+        	}
+        }
+        result.addAll(list);
+        return result;
+    }
+	
 	public List<String> findRepeatedDnaSequences(String s) {
-        List<String> list = new ArrayList<String>();
+		List<String> result = new ArrayList<String>();
+        Set<String> list = new HashSet<String>();
         Set<Integer> counts = new HashSet<Integer>();
         if(s.length() >= 10){
         	for(int i = 0; i <= s.length()-10; i++){
@@ -25,7 +47,8 @@ public class RepeatedDNASequences {
         			counts.add(sub);
         	}
         }
-        return list;
+        result.addAll(list);
+        return result;
     }
 	
 	public int strToInt(String atcg){
