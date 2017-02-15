@@ -7,7 +7,7 @@ public class KthLargestNumInTwoSortedArrays {
 		int[] A = {1,2,3,4,5,6};
 		int[] B = {2,2,3,6,8,13};
 		
-		System.out.println(new KthLargestNumInTwoSortedArrays().kthLargest(A, B, 12));
+		System.out.println(new KthLargestNumInTwoSortedArrays().kthLargest(A, B, 2));
 	}
 	
 	public int kthLargest(int[] A, int[] B, int k){
