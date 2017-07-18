@@ -23,8 +23,9 @@ public class WordBreak {
     }
 	
 	public int wordBreakNum(String s, Set<String> dict){
-		if(s.length() == 0)
+		if(s.length() == 0){
         	return 0;
+		}
 		
 		int[] result = new int[s.length() + 1];
 		result[0] = 1;
